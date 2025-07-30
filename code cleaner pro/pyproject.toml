@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "code-cleaner-pro"
+version = "0.2.0"
+description = "A tool to clean and reformat code according to style guides"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"},
+]
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "typer>=0.9.0",
+    "pyperclip>=1.8.2",
+    "rich>=13.0.0",
+    "requests>=2.31.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "radon>=5.1",
+]
+
+[project.scripts]
+code-clean = "code_cleaner_pro.__main__:app"
+
+[tool.pytest.ini_options]
+python_files = "test_*.py"
+testpaths = ["tests"]

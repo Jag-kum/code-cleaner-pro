@@ -1,0 +1,2 @@
+[console_scripts]
+code-clean = code_cleaner_pro.__main__:app
